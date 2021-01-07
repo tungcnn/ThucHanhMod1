@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function tryRemoveFromArray(array, x) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] == x) {
+                    array.splice(i, 1);
+                    i--;
+                }
+            }
+            return array;
+        }
+        let array = [1, 1, 2, 3, 4, 4, 4, 5, 6];
+        document.write("Array ban dau: " + array + "<br>");
+        let x = 4;
+        let x2 = 7;
+        let testNoMatch = tryRemoveFromArray(array, x2);
+        document.write("Ko co phan tu 7: " + array + "<br>");
+        let testWithMatch = tryRemoveFromArray(array, x);   
+        document.write("Xoa nhung phan tu 4: " + array + "<br>");
+    </script>
+</body>
+
+</html>

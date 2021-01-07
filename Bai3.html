@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let fibonacci = [];
+        function generateFibonacci(number) {
+            let fib1 = 0;
+            let fib2 = 1;
+            let fib = 0;
+
+            while (fib <= number) {
+                fib = fib1 + fib2;
+                fibonacci.push(fib)
+                fib1 = fib2;
+                fib2 = fib;
+            }
+        }
+        function isFibonacci(number) {
+            let found = false;
+            generateFibonacci(number);
+            for (let i = 0; i < fibonacci.length; i++) {
+                if (number == fibonacci[i])
+                    found = true;
+            }
+            return found;
+        }
+        let result = isFibonacci(37889062373143906);
+        document.write(result);
+    </script>
+</body>
+
+</html>
