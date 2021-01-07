@@ -5,9 +5,9 @@
     <script>
         let fibonacci = [];
         function generateFibonacci(number) {
-            let fib1 = 0;
-            let fib2 = 1;
-            let fib = 0;
+            let fib1 = 0n;
+            let fib2 = 1n;
+            let fib = 0n;
 
             while (fib <= number) {
                 fib = fib1 + fib2;
@@ -25,8 +25,11 @@
             }
             return found;
         }
-        let result = isFibonacci(37889062373143906);
-        document.write(result);
+        let result = isFibonacci(354224848179261915075n);
+        let result2 = isFibonacci(280571172992510140037611932413038677189525n);
+        let result3 = isFibonacci(222232244629420445529739893461909967206666939096499764990979600n);
+        let result4 = isFibonacci(56767567867876788656781267838237189423n)
+        document.write(result + "<br>" + result2 + "<br>" + result3 + "<br>" + result4);
     </script>
 </body>
 
